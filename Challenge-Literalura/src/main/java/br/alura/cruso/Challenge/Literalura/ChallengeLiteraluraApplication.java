@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import repository.Autores;
+import repository.Idiomas;
+import repository.Livros;
 
 import java.security.Principal;
 
@@ -11,13 +14,13 @@ import java.security.Principal;
 public class ChallengeLiteraluraApplication implements CommandLineRunner {
 
 	@Autowired
-	private LivroRepository livroRepositorio;
+	private Livros livroRepositorio;
 
 	@Autowired
-	private AutorRepository autorRepositorio;
+	private Autores autorRepositorio;
 
 	@Autowired
-	private IdiomaRepository idiomaRepositorio;
+	private Idiomas idiomaRepositorio;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ChallengeLiteraluraApplication.class, args);
