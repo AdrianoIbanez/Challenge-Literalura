@@ -1,5 +1,9 @@
 package br.alura.cruso.Challenge.Literalura.services;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class ConverteDados implements IConverteDados {
     private ObjectMapper mapper = new ObjectMapper();
 
@@ -12,7 +16,7 @@ public class ConverteDados implements IConverteDados {
         }
     }
 
-    public JsonNode toObject(String json) throws JsonProcessinException {
+    public JsonNode toObject(String json) throws JsonProcessingException {
         return mapper.readTree(json);
     }
 
