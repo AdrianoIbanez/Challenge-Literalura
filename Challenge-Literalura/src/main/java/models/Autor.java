@@ -1,5 +1,6 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "autores")
-@JsonIgnoreproperties(ignoreUnknown = true)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Autor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +37,7 @@ public class Autor {
         this.id = id;
     }
     public String getNome() {
-        this.id = id;
+        return nome;
     }
 
     public void setNome(String nome) {
