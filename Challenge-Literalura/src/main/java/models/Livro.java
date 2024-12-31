@@ -32,7 +32,7 @@ public class Livro {
 
     public Livro() {}
 
-    public Livro(String titulo, Autor autor, List<idioma> idioma, Integer downloads) {
+    public Livro(String titulo, Autor autor, List<Idioma> idioma, Integer downloads) {
         this.titulo = titulo;
         this.idioma = idioma;
         this.autor = autor;
@@ -63,7 +63,7 @@ public class Livro {
         this.titulo = titulo;
     }
 
-    public List<Idioma> getIdiomas {
+    public List<Idioma> getIdiomas(){
         return idioma;
     }
 

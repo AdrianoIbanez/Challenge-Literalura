@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class Autor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(nullable = false, unique = true)
     private String nome;
@@ -36,6 +36,7 @@ public class Autor {
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getNome() {
         return nome;
     }
@@ -56,7 +57,7 @@ public class Autor {
         return anoFalecimento;
     }
 
-    public void setAnoFalecimento() {
+    public void setAnoFalecimento(Integer anoFalecimento) {
         this.anoFalecimento = anoFalecimento;
     }
 
@@ -65,7 +66,7 @@ public class Autor {
     }
 
     public void setLivros(List<Livro> livros) {
-        if (livros != null){
+        if (livros != null) {
             livros.forEach(b -> {
                 if (b.getAutor() == null) {
                     b.setAutor(this);
@@ -74,21 +75,23 @@ public class Autor {
         }
         this.livros = livros;
     }
-}
 
-@Override
-public String toString() {
-    return "\nAutor: " + nome + "\n" +
-            "Ano de nascimento: " + anoNascimento + "\n" +
-            "Ano de falescimento: " + anoFalescimeto + "\n" +
-            "Livros: " + formatarLivros(livros);
-}
-
-private String formatarLivros(List<Livro> livros) {
-    if (livros == null || livros.isEmpty()) {
-        return "Nenhum livro registrado.";
+    @Override
+    public String toString() {
+        return  "\nAutor: " + nome + "\n" +
+                "Ano de nascimento: " + anoNascimento + "\n" +
+                "Ano de falecimento: " + anoFalecimento + "\n" +
+                "Livros: " + formatarLivros(livros);
     }
-    return livros.stream()
-            .map(Livro::getTitulo)
-            .collect(Collectors.joining(" | "));
+
+    private String formatarLivros(List<Livro> livros) {
+        if (livros == null || livros.isEmpty()) {
+            return "Nenhum livro registrado.";
+        }
+        return livros.stream()
+                .map(Livro::getTitulo)
+                .collect(Collectors.joining(" | "));
+    }
+
 }
+
