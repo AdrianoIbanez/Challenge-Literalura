@@ -1,6 +1,6 @@
-package repository;
+package br.alura.cruso.Challenge.Literalura.services.repository;
 
-import models.Autor;
+import br.alura.cruso.Challenge.Literalura.services.models.Autor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

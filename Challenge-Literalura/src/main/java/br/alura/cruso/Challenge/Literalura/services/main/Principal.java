@@ -2,7 +2,6 @@ package br.alura.cruso.Challenge.Literalura;
 
 public class Principal {
 
-p
 }
 
 public void exibirMenu() {

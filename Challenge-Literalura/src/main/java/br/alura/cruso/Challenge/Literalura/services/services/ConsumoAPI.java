@@ -1,4 +1,4 @@
-package br.alura.cruso.Challenge.Literalura.services;
+package br.alura.cruso.Challenge.Literalura.services.services;
 
 import java.io.IOException;
 import java.net.URI;

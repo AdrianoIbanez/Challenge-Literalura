@@ -1,6 +1,6 @@
-package repository;
+package br.alura.cruso.Challenge.Literalura.services.repository;
 
-import models.Livro;
+import br.alura.cruso.Challenge.Literalura.services.models.Livro;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

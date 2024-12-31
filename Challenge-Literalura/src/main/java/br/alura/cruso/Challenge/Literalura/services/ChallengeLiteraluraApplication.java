@@ -1,12 +1,12 @@
-package br.alura.cruso.Challenge.Literalura;
+package br.alura.cruso.Challenge.Literalura.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import repository.Autores;
-import repository.Idiomas;
-import repository.Livros;
+import br.alura.cruso.Challenge.Literalura.services.repository.Autores;
+import br.alura.cruso.Challenge.Literalura.services.repository.Idiomas;
+import br.alura.cruso.Challenge.Literalura.services.repository.Livros;
 
 import java.security.Principal;
 
