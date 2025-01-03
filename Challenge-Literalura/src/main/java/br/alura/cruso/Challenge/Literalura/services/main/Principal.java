@@ -10,9 +10,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -147,7 +149,7 @@ public class Principal {
 
     @Transactional
     private void salvarDados(DadosLivro dados) {
-        Autor autor = buscarOuCriarAutor(dados.autores().getFirst());
+        Autor autor = buscarOuCriarAutor(dados.autores().get(0));
         List<Idioma> idiomas = dados.idioma().stream()
                 .map(this::buscarOuCriarIdioma)
                 .collect(Collectors.toList());
