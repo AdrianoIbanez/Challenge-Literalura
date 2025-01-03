@@ -14,13 +14,13 @@ import java.security.Principal;
 public class ChallengeLiteraluraApplication implements CommandLineRunner {
 
 	@Autowired
-	private Livros livroRepositorio;
+	private Livros repositorioLivros;
 
 	@Autowired
-	private Autores autorRepositorio;
+	private Autores repositorioAutores;
 
 	@Autowired
-	private Idiomas idiomaRepositorio;
+	private Idiomas repositorioIdiomas;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ChallengeLiteraluraApplication.class, args);
@@ -28,7 +28,7 @@ public class ChallengeLiteraluraApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Principal principal = new Principal(livroRepositorio, autorRepositorio, idiomaRepositorio); {
+		Principal principal = new Principal(repositorioLivros, repositorioAutores, repositorioIdiomas); {
 		principal.exibirMenu();
 		}
 	}
