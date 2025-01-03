@@ -41,9 +41,9 @@ public class Principal {
                     ---------------------------------
                     1 - Buscar Livros pelo titulo
                     2 - Buscar livro por autor
-                    3 - Listar livros registrados 
+                    3 - Listar livros registrados
                     4 - Listar autores regisrados
-                    5 - Listar livros por autor  
+                    5 - Listar livros por autor
                     6 - Listar autores vivos em um determinado ano
                     7 - Listar livros em um determinado idioma
                     8 - Top 10 livros mais baixados

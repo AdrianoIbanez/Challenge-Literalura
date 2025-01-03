@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import br.alura.cruso.Challenge.Literalura.services.repository.Autores;
 import br.alura.cruso.Challenge.Literalura.services.repository.Idiomas;
 import br.alura.cruso.Challenge.Literalura.services.repository.Livros;
+import br.alura.cruso.Challenge.Literalura.services.main.Principal;
 
-import java.security.Principal;
 
 @SpringBootApplication
 public class ChallengeLiteraluraApplication implements CommandLineRunner {
