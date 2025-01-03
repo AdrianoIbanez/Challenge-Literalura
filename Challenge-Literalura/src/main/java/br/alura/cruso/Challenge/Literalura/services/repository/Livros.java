@@ -10,5 +10,5 @@ import java.util.List;
 public interface Livros extends JpaRepository<Livro, Long> {
     List<Livro> findByIdioma_SiglaIdiomaOrderByAutor_NomeAsc(String idiomaEscolhido);
     List<Livro> findTop10ByOrderByDownloadsDesc();
-    List<Livro> FindByAutor_NomeContainigIgnoreCase(String autorEscolhido);
+    List<Livro> findByAutor_NomeContainingIgnoreCase(String autorEscolhido);
 }

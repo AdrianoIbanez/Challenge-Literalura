@@ -29,7 +29,7 @@ public class ChallengeLiteraluraApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Principal principal = new Principal(repositorioLivros, repositorioAutores, repositorioIdiomas); {
-		principal.exibirMenu();
+		principal.exibeMenu();
 		}
 	}
 }
