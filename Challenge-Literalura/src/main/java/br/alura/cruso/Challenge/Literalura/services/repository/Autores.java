@@ -15,9 +15,10 @@ public interface Autores extends JpaRepository<Autor, Long> {
 
     List<Autor> findByAnoNascimentoLessThanEqualAndAnoFalecimentoGreaterThanEqual(int ano, int ano1);
 
-    @Query("SELECT a, SUM(1.downloads) AS totalDownloads " +
-            "FROM Autor a JOIN a.livros 1 " +
+    @Query("SELECT a AS autor, SUM(l.downloads) AS totalDownloads " +
+            "FROM Autor a JOIN a.livros l " +
             "GROUP BY a " +
             "ORDER BY totalDownloads DESC")
     List<Object[]> findTopAutoresByDownloads(Pageable pageable);
+
 }
