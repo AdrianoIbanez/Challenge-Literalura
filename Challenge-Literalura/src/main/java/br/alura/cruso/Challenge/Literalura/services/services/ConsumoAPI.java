@@ -8,7 +8,7 @@ import java.net.http.HttpResponse;
 
 public class ConsumoAPI {
 
-    private final URI endereco = URI.create("");
+    private final URI endereco = URI.create("https://gutendex.com/books/?search=");
 
     public String consumoAPI (String busca) {
         HttpClient client = HttpClient.newHttpClient();
